@@ -1,0 +1,25 @@
+h1{
+    text-align: left;
+}
+h2{ text-align: right;
+    color:blue;
+
+}
+h3{ text-decoration: underline red;
+    text-align: left;
+    color: red;
+    text-transform:capitalize;
+    font-size:25px;
+}
+h4{ font-size: 29px;
+    width:1200px;
+    color:red;
+}
+p{
+    width:1200px;
+    font-size:25px;
+}
+body{
+    width: 1500px;
+    text-align: left;
+}
