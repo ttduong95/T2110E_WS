@@ -41,6 +41,11 @@ body{
     margin-left: 30%;
     margin-right: 10%;
 }
+.conten3{
+    height:150px;
+    border-bottom-style: solid;
+}
+
 .tieude-1{
     font-size: 20px;
     text-transform: uppercase;
@@ -64,7 +69,4 @@ body{
             margin-left: 30%;
 
 }
-#border{
-    padding:  20px;
-    border-bottom-style: solid;
-}
+
