@@ -16,8 +16,11 @@ p{
 
 }
 a{
-    color: rgb(68, 72, 74);/* ma mau RGB*/
+    color: rgb(217, 33, 245);/* ma mau RGB*/
 }
 body{
     background-color: #12decb;
+}
+body{
+    padding-left: 200px;
 }
