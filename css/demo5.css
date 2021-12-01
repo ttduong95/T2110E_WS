@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.body{ font-family: 'Gluten', cursive;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 2px;
+    background-color: #eeeeee;
+    text-align: left;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    font-family: 'Gluten', cursive;
+}
+img{
+    max-width: 100%;
+}
+p{  font-family: 'Gluten', cursive;
+    margin-bottom: 10px;
+}
+.section{
+    float:left;
+    width: 100%;
+}
+.container{
+    width: 1250px;
+    margin: 0 auto;
+}
+.header{
+    background-color: #ece5de;
+    border-bottom: 1px solid #ffffff;
+    padding: 20px 0;
+}
+
+.tieude li {
+    list-style: none;
+    float: left;
+    padding: 10px;
+}
+.tieude li a{
+    text-decoration: none;
+    color: #1bd32a;
+
+}
+.top a{
+    font-size: 40px;
+    font-family: 'Gluten', cursive;
+    font-weight: 800;
+    padding-right:50px ;
+}
+.search{
+    width: 30%;
+    background-color: #ffffff;
+    margin-top: 10px;
+
+}
+.search a{
+    font-weight: 300;
+    font-size: 25px;
+    padding: 10px ;
+}
+.tieude .last{
+    float: right;
+    font-size: 20px;
+    padding: 10px 10px;
+}
+.nav{
+    background-color: #ece5de;
+    border-bottom: 1px solid #ffffff;
+}
+.menu li {
+    float: left;
+    list-style: none;
+    padding: 10px;
+}
+.menu li a{
+    font-size: 20px;
+    color: #1bd32a;
+    font-weight: 300px;
+}
+.entry{
+    float: left;
+    width: 100%;
+    padding: 20px;
+    background-color: #bbb1b1;
+}
+.buy{
+    float: left;
+    width: 20%;
+    height: 500px;
+    background-color: #85dc52;
+    border: 2px solid black;
+    margin: 30px;
+    text-align: center;
+
+
+}
+.buy img{
+    width: 300px; height: 300px;
+}
+.buy p{
+    padding-top: 30px ;
+    font-size: 26px;
+    font-weight: 300px;
+
+}
+.buy:hover{
+    transform: scale(1.05);
+}
+.shop{
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 10px;
+}
+.buy a{
+    color: #eeeeee;
+    font-weight: 900;
+    font-size: 30px;
+}
+#item{
+    width: 100%;
+    background-color: #222222;
+    padding-bottom: 10px;
+}
+
+
+
+

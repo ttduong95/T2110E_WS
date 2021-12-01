@@ -1,0 +1,117 @@
+*{  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color:white;
+    color: black;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Roboto",sans-serif;
+    background-image: url("../img/anhnen.jpg");
+    background-size: cover;
+}
+.item {
+    height: 300px;
+    width: 350px;
+    border: solid black;
+    float: left;
+    margin: 10px 10px 20px 10px;
+    /* top right bottom left*/
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 5px 0px 10px red;
+    border-radius: 5px;
+}
+#special{
+    background-color: #e33030;
+}
+#special p{ /* tac dong den p nam trong khu vuc special*/
+    /*nguyen ly uu tien: the<cha the<.class<cha .class<#id< cha.#id
+    -> neu cung cap thi cao do cua cha cao hon va ro rang hon thi uu tien cao hon
+    -> neu doi tuong y het nhau ->> uu tien cai viet sau
+     */
+}
+.item #pt-gold{ /*lv6*/
+    color: yellow;
+}
+#pt-gold{ /*lv5*/
+    color: olive;
+}
+.item.pt{ /*lv4*/
+    color: aqua;
+}
+.pt /*lv3*/
+    color: pink;
+}
+div p/*lv2*/
+    color: darkmagenta;
+}
+p{/*lv1*/
+    color: red;
+}
+p{
+    color:green;
+}
+#special{
+    position: absolute; /*relative absolute fixed*/
+}
+#s-img{
+    position:relative;
+    top: 20px;
+    left: 30px;
+    z-index: 2;
+}
+#special p{
+    position:relative;
+    top: 20px;
+    left: 30px;
+    z-index: 1;
+
+}
+#f-fixed{
+    position:relative;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1;
+}
+.popup{
+    display: none;*/ none block inline inline block*/
+    box-shadow: 0 0 5px #9d9987;
+    width: 350px;height: 200px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    z-index: 10;
+    margin-top:-125px;
+    margin-left: -175px;
+
+}
+.bg{
+    background-color: black;
+
+}
+#special:hover{
+    transform: rotate(90deb);
+
+}
+.item{
+    transition: all 200ms;
+}
+.item:hover{
+    transform: scale(50deb) ;
+}
+#special{
+    animation:light ; /* khai bao chuyen dong*/
+    animation-duration: 3s;/*so thoi gian chay*/
+    animation-iteration-count: 3;/* so lan chay*/
+}
+@keyframes light {
+    from{
+        transform: rotate();
+    }
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="Cre">
+    <div class="form">
+        <h1>Create task</h1>
+        <form method="get" action="#">
+
+            <input class="a" type="text" name="Type" placeholder="Type" required /><br/>
+
+            <select name="Company">
+                <option selected value="CTY A">Company</option>
+                <option value="CTY A">CTY A</option>
+                <option value="CTY B">CTY B</option>
+                <option value="CTY C">CTY C</option>
+            </select>
+             <select name="Opportunity">
+                 <option value="a">abc</option>
+                 <option value="b">abce</option>
+                 <option selected value="a">Opportunity</option>
+                 <option value="c">abcef</option>
+                 <option value="d">abcefg</option>
+             </select><br/>
+            <input class="b" type="text" name="task name" placeholder="Task name" required><br/>
+            <input class="b" type="text" name="CC" placeholder="CC"><br/>
+            <div class="main">
+                <div class="content">
+            <label class="c">Nature of request</label><br/>
+            <label class="c"><input type="checkbox" name="nature">Ads review</label><br/>
+            <label class="c"><input type="checkbox" name="nature">Keywords review</label><br/>
+            <label class="c"><input type="checkbox" name="nature">Extenstions review</label><br/>
+                </div>
+                <div class="content1">
+            <label class="d">Current reviewable status</label><br/>
+            <label class="d"><input type="radio" name="Curren" value="app">Approved</label><br/>
+            <label class="d"><input type="radio" name="Curren" value="Not">Not approved</label>
+                </div>
+                <div class="but">
+            <button type="submit">Submit</button>
+            <button type="button">Botton</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
