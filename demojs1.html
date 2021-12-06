@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS</title>
+</head>
+<body>
+        <script type="text/javascript">
+          // code tai day
+            var x; // khai bao bien ben js- dynamic datatype
+            // number
+            // string
+            //array
+            // object
+            // function
+
+            x = 10; // x la 1 number
+            x= x+5; //15
+            console.log(x); // giong printf
+            var y= "xin chao cac ban";
+            console.log(y);
+            x= x+y; // ghep chuoi 15+ xin chao cac ban=> 15 xin chao cac ban
+            console.log(y);
+            /*
+            number + number=> number
+            number + string => string
+            string + string => string
+             */
+        /*   console.log("gia tri cua x="+x);
+            if( x>10){
+
+            }else{
+
+            }
+            for(var i=0; i<10;i++){
+                console.log("hello world");
+            }
+
+            var arr=[]; // khong can noi ro kieu giu lieu va kich thuoc
+            arr[0]=1;
+            arr[1]="xin chao";
+            arr[2]=[]
+            arr[2][0]=15;
+            arr[2][1]="t2110e";
+            arr[2][2]=[1,2,3,4];
+            arr[3]=10;
+            // do sau array tuy y
+            // =>> cau truc cay du lieu cua mang phai dc kiem soat ro rang va on dinh
+            var n=1217;
+            var count=0;
+            for(var i=2; i<n/2;i++){
+                if(n%i==0){
+                    count++;
+                    break;
+                }
+            }
+            if(count>0){
+                console.log(n+"khong phai so nguyen to");
+
+            }else{
+                console.log(n+"la so nguyen to");
+            }
+            var ary =[3,12,9,90,1,0,15,29];
+            for(var i=0;i<ary.length-1;i++){
+                for(var j=0;j<ary.length-i-1;j++){
+                    if(ary[j]>ary[j+1]){
+                        var tmp=ary[j];
+                        ary[j]=ary[j+1];
+                        ary[j+1]=tmp;
+                    }
+                }
+            }
+            console.log("sau khi sap xep: "+ary);// console.log ko phai la printf. thuc ra no laf 1 dang cua debug(dump)
+            // them 1 gia tri vao mang
+            ary[ary.length]=159; // ary[8]=159
+            console.log("sau khu them 159"+ary);
+            ary.push(255);
+            console.log("sau khi them 255: "+ary);
+            console.log(ary);
+// tinh tong
+            function tinhtong(a,b){
+                return a+b;
+            }
+            var c=tinhtong(5,6);
+            console.log("c="+c);
+            var d=tinhtong("xin chao","moi nguoi");
+            console.log(d);
+            inmenu(); // chi can dung script
+            function inmenu(){
+                console.log("menu:");
+                console.log("1. food");
+
+            }
+            alert("cam tre em duoi 18 tuoi tru cap trang");
+            var kq=confirm("are you sure?"); // return boolean
+            console.log(kq);
+            var p= prompt("what you name?"); // return string
+            console.log(p);
+            p = parseInt(p);
+            // 18->18
+            // 18abc -> 18
+            // 1ab8c -> 1
+            //a18bc -> NaN: not a number
+            console.log(p+10); // nhap vao 18 -> 28
+            // nhap vao 2 so nguyen. tim ucln vaf bcnn cua 2 so do
+            var n1=prompt("nhap so thu 1");
+                n1=parseInt(n1);
+            var n2=prompt("nhap so thu 2");
+             n2=parseInt(n2);
+            for(var i=n1;i>=1;i--){
+                if(n1%i==0 && n2%i==0){
+                    console.log("UCLN: "+i);
+                    break;
+                }
+            }
+            for( var i=n1; true;i++){
+                if(i%n1==0 && i%n2==0){
+                    console.log("BCNN: "+i);
+                    break;
+                }
+            }
+            var n;
+            do{
+                n=prompt("nhap 1 so nguyen duong");
+                n=parseInt(n);
+            }while(isNaN(n) || n<=0);
+
+
+
+*/
+
+
+
+
+
+
+
+        </script>
+        <script type="text/javascript" src="js/demo.js">
+
+        </script>
+
+</body>
+</html>
