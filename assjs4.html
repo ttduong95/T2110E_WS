@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASS JS4</title>
+    <link type="text/css" href="css/thoitiet.css">
+</head>
+<body>
+<div class="main">
+<ul class="forecast">
+
+</ul>
+</div>
+<script type="text/javascript" src="js/JQuery.js"></script>
+<script type="text/javascript">
+    $.ajax(
+        {
+            url:"http://api.openweathermap.org/data/2.5/forecast",
+           data:{
+               q:"Hanoi,vietnam",
+               unit:"metric",
+               appid:"09a71427c59d38d6a34f89b47d75975c",
+           },
+            method:"GET",
+            success: function (data){
+                var list=data.list;
+                for(var i=0;i<list.length;i++){
+                    var timer =list[i].dt_txt;
+                    var temp=list[i].main.temp;
+                    var des=list[i].weather[0].description;
+                    var icon=list[i].weather[0].icon;
+                     var x = "<li>\n" +
+                        "                        <h3 class=\"timer\">"+timer+"</h3>\n" +
+                        "                        <h2 class=\"temp\"><span>"+temp+"</span><sup>o</sup>C</h2>\n" +
+                        "                        <p>"+des+"</p>\n" +
+                        "                        <img class=\"des\" src=\"http://openweathermap.org/img/wn/"+icon+"@2x.png\"/>\n" +
+                        "                    </li>";
+                    $(".forecast").append(x);
+                }
+                }
+
+    }
+
+
+    );
+
+</script>
+</body>
+</html>
