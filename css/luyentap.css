@@ -1,0 +1,31 @@
+.ngoai{
+    display: none;
+    background-color: #aa6e6e;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left:0;
+    opacity: 0.5;
+}
+.popup{
+    display: none;*/ none block inline inline block*/
+    box-shadow: 0 0 5px #9d9987;
+    width: 350px;height: 200px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    z-index: 10;
+    margin-top:-125px;
+    margin-left: -175px;
+    background-color: white;
+}
+.closepop{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+}
