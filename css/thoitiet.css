@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    float: none;
+    margin: 0 auto;
+}
+.forecast{
+    list-style: none;
+}
+.forecast li{
+    float: left;
+    width: 260px;
+    height: 180px;
+    list-style: none;
+}
