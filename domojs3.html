@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS 3</title>
+</head>
+<body>
+    <h1 id="tit" class="x1 x2" >chinh sach an ninh</h1>
+    <p id="para">dien dich ohcu am jdjakdj</p>
+    <p id="countdown"></p>
+    <h2 id="demnguoc"></h2>
+        <h2><span id="min">00</span>:<span id="sec">00</span></h2>
+        <span id="c-h">00</span>:<span id="c-m">00</span>:<span id="c-s">00</span>
+    <script type="text/javascript">
+    // cai ma chung ta nhin thay o 1 doi tuong ko phai la doi tuong ma la thong tin cua doi tuong
+    // mong muon: de chu h1 ban dau mau den, 10s sau chuyen sang mau do
+    // tao 1 doi tuong tham chieu tuong duong voi phan tu co the h1
+    // tac dong vao doi tuong nay de no dieu chinh thong tin hien thi
+    setTimeout(function (){
+        // tao doi tuong tham chieu
+        var h1obj =document.getElementById("tit"); // buoc 2 tao doi tuong tham chieu tuong duong h1( id"tit")
+        h1obj.style.color= "red"; // tac dong vao doi tuong de lam ra thong tin minh muon( color="red")
+        h1obj.style.backgroundColor="orange";
+        h1obj.style.fontSize="30px";
+
+        h1obj.innerText="Chinh sach an ninh ha noi"; //
+        h1obj.innerHTML="<i>chinh sach an ninh cua ha noi</i>"; // thay doi thuoc tinh tac dong vao html
+
+        h1obj.classList.add("x3");
+
+        if(h1obj.classList.contains("x4")){
+            h1obj.classList.remove("x4");
+        }else {
+            h1obj.classList.add("x4");
+        }
+
+    },10000);
+
+        var num = 10;
+
+        var cx= setInterval(function (){
+            var cd =document.getElementById("countdown");
+            cd.innerText= num;
+            num--;
+            if(num<0){
+                clearInterval(cx);
+            }
+
+        },1000);
+
+        var h=30, s=0;
+        var phut,giay;
+
+        var dm=setInterval(function (){
+            phut= h<10?"0"+h:h;
+            giay=s<10?"0"+s:s;
+            var dem=document.getElementById("demnguoc");
+            dem.innerText= phut+":"+giay;
+            s--;
+            if(s<0){
+                s=59;
+                h--;
+            }
+            if(h<0){
+                clearInterval(dm);
+            }
+            dem.style.fontSize= "60px";
+            dem.style.backgroundColor="Yellow"
+            dem.style.boxSizing="border-box";
+            dem.style.color= "white";
+            dem.style.float="none";
+            dem.style.width= "300px";
+            dem.style.height="200px";
+            dem.style.paddingTop="65px"
+            dem.style.textAlign="center";
+            dem.style.border="1px solid black";
+            if(h<20){
+                dem.style.background="pink";
+            }
+            if(s<10){
+                dem.style.background="red";
+            }else if(s<20){
+                dem.style.background="blue";
+            }else if(s<40){
+                dem.style.background=" green"
+            }
+
+
+        },30);
+
+    function time() {
+        var m, s=0;
+        do {
+            m = parseInt(prompt("Nhap vao gia tri can dem nguoc"));
+        } while (isNaN(m) || m <= 0);
+
+        var timer = setInterval(function () {
+            var minute = document.getElementById("min");
+            var secont = document.getElementById("sec");
+            var mins = m<10?"0"+m:m;
+            minute.innerText= mins;
+            secont.innerText= s<10?"0"+s:s;
+            s--;
+            if (s < 0) {
+                s = 59;
+                m--;
+            }
+            if (m < 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }time();
+    function clock(){
+        setInterval(function (){
+            var date=new Date(); // lay thoi gian o dau
+            document.getElementById("c-h").innerText=date.getHours();
+            document.getElementById("c-m").innerText=date.getMinutes();
+            document.getElementById("c-s").innerText=date.getSeconds();
+        },1000);
+    }
+    clock();
+    // java desktop app -> mays tinh(code client side - gio theo may chu
+
+    var hh2= document.getElementsByTagName("h2"); // n la 1 tap hop array (colection) nhieu doi tuong
+    for(var i=0; i<hh2.length;i++){
+        hh2[i].style.color="red";
+    }
+    var x1s= document.getElementsByClassName("x1"); // array cac object
+    for(var i=0; i<x1s.length;i++){
+        x1s[i].style.background="green";
+    }
+    var x2ss= document.querySelectorAll("h1.x2"); // goi the h1 co class x2
+    for(var i=0;i<x2ss.length;i++){
+        x2ss[i].style.fontsize="40px";
+    }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

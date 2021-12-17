@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data binding</title>
+</head>
+<body>
+    <h1 class="city">Ha Noi, Viet Nam - Kinh do:-122 Vi do: 37</h1>
+    <h2 class="temp">Nhiet do: 18<sup>o</sup></h2>
+    <h2 class="hum">Do am: 71%</h2>
+    <h2 class="pres">Ap suat: 1023</h2>
+    <h2 class="wind">Toc do gio: 1.5km/h</h2>
+
+    <script type="text/javascript" src="js/JQuery.js"></script>
+    <script type="text/javascript">
+        // AJAX phuong phap trao doi du lieu voi may chu
+    //    var data=   // JSON: Javascrip object notation
+    $.ajax(
+        {
+            url:"https://api.openweathermap.org/data/2.5/weather",
+            data:{
+                q:"hanoi,vietnam",
+                unit:"metric",
+                appid:"09a71427c59d38d6a34f89b47d75975c",
+            },
+            method:"GET",
+            success:function (data){ // call back- se thuc thi khi viec trao doi du lieu thanh cong
+                var city=data.name;
+                var country= data.sys.country;
+                var long= data.coord.lon;
+                var lat= data.coord.lat;
+                var txt_city= city+" , "+country+"- Kinh do: "+long+" Vi do: "+lat;
+                var t=$(".city");
+                t.text(txt_city);
+                var tmp= data.main.temp;
+                $(".temp").html("Nhiet do: "+tmp+"<sup>o</sup>F");
+                var hum1=data.main.humidity;
+                $(".hum").html("Do am: "+hum1+"%");
+                var as=data.main.pressure;
+                $(".pres").html("Ap suat: "+as);
+                var tocdo=data.wind.speed;
+                $(".wind").html("Toc do gio: "+tocdo+"km/h");
+            }
+        }
+    );
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Js 2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // OOP- lap trinh huong doi tuong
+        // typescript
+        // doi tuong
+        // 1 dang du lieu
+        // struct( advance datatype)
+        // co 2 thu: 1. thong tin( du lieu) --> thuoc tinh
+        //            2. Phuong thuc(hanh vi) mathed  --> trong code: nhin nhu 1 function
+        var obj={}; // khai bao doi tuong rong, khai bao gia tri sau.
+        obj.name ="Le Huu Phuoc";
+        obj.telephone ="0987654321";
+        obj.girlfriend= ["van anh","hien"];
+        obj.run= function (){
+            alert("xin chao cac ban");
+        }
+        console.log(obj.name); // su dung thong tin;
+        obj.run(); // su dung phuong thuc(hanh vi)
+        // hoac co the tao doi tuong:
+        var obj2={
+            name:"bui nhu lac",
+            telephone:"0123456789",
+            girlfriend:[],
+            run: function (){
+                alert(this.name+" xin chao cac ban"); // this chi viet ben trong doi tuong. chay den dau thi this dung den day
+                alert("toi co"+this.girlfriend.length+"ban gai");
+            }
+            lamgido: function (){
+                this.run();
+                alert("hello");
+        }
+
+        }
+        obj2.run();
+        obj2.name= "do duy anh";
+        obj2.run(); // neu ma chay nhu nay thi van ra ten bui nhu lac theo ham alert
+        var obj3= Object.create(obj2); // nhan ban doi tuong giong obj2
+        obj3.name= "The Duong";
+        obj3.girlfriend.push("Trang"); // dua them Trang vao array girlfriend
+        obj3.run();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JQuery</title>
+</head>
+<body>
+    <button type="button" onclick="ON()">ON</button>
+    <button type="button" onclick="OFF()">OFF</button>
+    <button type="button" onclick="TOG()">TOGGLE</button>
+
+
+    <h1 id="tit" class="x1 x2">Demo Jquery</h1>
+    <p id="para" class="x1">jkfjksdfskfksfksnvn ckn fskdf  fsdkf skdfs  sf sk</p>
+
+
+
+<script type="text/javascript" src="js/JQuery.js"></script>
+<script type="text/javascript">
+    // lam the nao de tao doi tuong jquery de su dung
+    var obj =$("#tit"); // 1 doi tuong dai dien 1 tap hop (mang)
+    var obj2= $(".x1"); // 1 doi tuong dai dien 1 tap hop (mang)
+    // object collection
+    // thao tac voi doi tuong nay thi ca tap hop deu bi anh huong giong nhau
+    // cung co the thao tac tren tung phan
+
+    // 1 so ham hay dung
+    obj.css("color","red");
+    obj2.css(
+        { color:"green",
+            "background-color":"orange"
+    }
+    );
+    obj2.text("xin chao, gia tri vua chinh sua");
+    console.log(obj2.text());
+
+    obj.html("<p>Xin chao day la noi dung trong the p</p>");
+    obj.append("<i>hello!</i>");
+    obj.prepend("<i>hello!</i>")
+    obj.addClass("x3");
+    obj.removeClass("x3");
+    if(obj.hasClass("x3")){
+        obj.addClass("x4");
+    }
+    var para= $("#para");
+    function ON(){
+     //   para.show();
+     //   para.fadeIn(500);
+        para.slideDown(500);
+    }
+    function OFF(){
+     //   para.hide();
+     //   para.fadeOut(500);
+        para.slideUp(500);
+    }
+    function TOG(){
+        para.slideToggle();
+    }
+
+
+</script>
+</body>
+</html>

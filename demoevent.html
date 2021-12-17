@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo event</title>
+    <link rel="stylesheet" href="css/demoevent.css">
+</head>
+<body>
+    <div class="box" onmouseenter="hoverme()" onmouseleave="outme()" >
+        <button type="button" onclick="clicklisten()">Click me</button>
+    </div>
+    <form onsubmit="summitme()" action="#" method="post">
+        <input onkeypress="witeme()" type="text" name="x-name" placeholder="Enter here"/><br/>
+        <input id="ud" onpaste="alert('paste');" onkeydown="keydownme(this)" onkeyup="keyupme(this)" type="text" name="x-name" placeholder="Enter here"/><br/>
+        <input id="ud2" oncopy="alert('copy');" oncut="alert('cut')" onkeydown="keydownme(this)" onkeyup="keyupme(this)" type="text" name="x-name" placeholder="Enter here"/><br/>
+        <select name="gender" onchange="choosegender(this)">
+            <option value=""
+        </select>
+
+
+
+        <button type="submit">submit</button>
+
+    </form>
+
+<script type="text/javascript">
+    function choosegender(e){
+        console.log("0.value");
+    }
+
+
+    function summitme(){
+        alert("submit me...");
+    }
+
+
+    function witeme(){
+        console.log("Write me...");
+    }
+    function keydownme(u){ // phat ra su kien khi an phim xuong
+    console.log("key down me..."+ u.value);
+    }
+    function keyupme(u){
+        console.log("key up me...."+u.value);
+    }
+
+    function clicklisten(){
+        alert("Ban vua click vao tui ha?");
+        alert("Thich oi la thich");
+    }
+    function hoverme(){
+        console.log("mouse entered me...");
+    }
+    function outme(){
+        console.log("Mouse outed me...");
+    }
+</script>
+</body>
+</html>
