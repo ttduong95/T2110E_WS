@@ -16,10 +16,11 @@ section{
 }
 
 .container{
+    padding: 20px;
     width: 600px;
     float: none;
     background-color: rgba(239, 61, 230, 0.93);
-    height: ;
+
 }
 form{
     background-color: white;
